@@ -90,11 +90,12 @@ h2 {
 section {
     width: 100%;
     margin-bottom: 64px;
+    padding-top: 32px;
 }
 
 h3 {
     font-size: 32px;
-    margin: 40px 0 8px 10px;
+    margin: 0 0 8px 10px;
 }
 
 .grid {
