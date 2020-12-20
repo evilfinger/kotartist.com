@@ -1,0 +1,19 @@
+{
+  "name": "kotartist",
+  "version": "1.0.0",
+  "description": "personal website",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/evilfinger/kotartist.com.git"
+  },
+  "author": "Ksenia Palchikova",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/evilfinger/kotartist.com/issues"
+  },
+  "homepage": "https://github.com/evilfinger/kotartist.com#readme",
+  "devDependencies": {
+    "http-server": "^0.12.3"
+  }
+}
