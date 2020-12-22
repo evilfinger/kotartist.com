@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "personal website",
   "scripts": {
-    "start": "http-server ."
+    "start": "http-server . -c-1"
   },
   "repository": {
     "type": "git",
