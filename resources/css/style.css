@@ -34,7 +34,7 @@ h4,
 
 /* MAIN MENU */
 .background {
-    background-image: linear-gradient(rgba(30, 30, 30, 0.45), rgba(30, 30, 30, 0.45)), url("../img/background-4.png");
+    background-image: linear-gradient(rgba(30, 30, 30, 0.45), rgba(30, 30, 30, 0.45)), url("/resources/img/background-1.jpg");
     background-position: 50% 30%;
 }
 
@@ -61,8 +61,8 @@ nav {
 }
 
 .content {
-    position: absolute;
-    top: 60%;
+    position: relative;
+    top: 50%;
     width: 100%;
 }
 
@@ -146,9 +146,61 @@ h3 {
     font-weight: 300;
 }
 
+/* IMAGE VIEWER */
+.img-box {
+    display: none;
+    position: fixed;
+    top: 0;
+    background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9));
+    padding: 20px 0;
+    width: 100%;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.img-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1 1 auto;
+    padding-top: 12px;
+}
+
+.img {
+    /* background-image: url(" "); */
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 50% 50%;
+    width: 100%;
+    height: 100%;
+}
+
+.description {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300;
+    text-align: center;
+    padding-top: 12px;
+    flex: 0 0 82px;
+}
+
+.img-title {
+    font-family: "Josefin Sans", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    text-transform: uppercase;
+}
+
+.close-btn {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    font-size: 20px;
+    font-weight: 300;
+}
+
 /* BIO */
 .bio-background {
-    background-image: linear-gradient(rgba(30, 30, 30, 0.7), rgba(30, 30, 30, 0.7)), url("../img/background-2.png");
+    background-image: linear-gradient(rgba(30, 30, 30, 0.7), rgba(30, 30, 30, 0.7)), url("/resources/img/background-2.jpg");
     background-position: 50% 30%;
     margin-bottom: 74px;
 }
@@ -224,6 +276,7 @@ footer{
 .contact-info li a:hover,
 .main-nav li a:hover {
     color: chocolate;
+    transition: 0.5s;
 }
 
 .eml-footer,
