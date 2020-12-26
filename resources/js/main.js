@@ -48,16 +48,27 @@ for (i = 0; i < allImgLinks.length; i++) {
   };
 }
 
+const prevImg = function(e) {
+  let prevImgIndex = parseInt(currentImgIndex) - 1;
+
+  if (prevImgIndex === -1) {
+    prevImgIndex = allImgLinks.length - 1;
+  };
+
+  showImg(allImgLinks[prevImgIndex]);
+}
+
 const nextImg = function(e) {
   let nextImgIndex = parseInt(currentImgIndex) + 1;
 
-  if (nextImgIndex === 20) {
+  if (nextImgIndex === allImgLinks.length) {
     nextImgIndex = 0;
   };
 
   showImg(allImgLinks[nextImgIndex]);
 }
 
+document.querySelector('.previous').onclick = prevImg;
 document.querySelector('.next').onclick = nextImg;
 
 const closeViewer = function(e) {
