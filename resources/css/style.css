@@ -124,6 +124,7 @@ h3 {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
+    cursor: pointer;
 }
 
 .thumb a:hover {
