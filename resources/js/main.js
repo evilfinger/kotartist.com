@@ -32,16 +32,33 @@ function updateAnchor(element) {
 
 // IMAGE VIEWER -------------------------------------------------------------------------
 const allImgLinks = document.querySelectorAll('.img-viewer-trigger');
+let currentImgIndex = '';
+
+const showImg = function(anchorElement) {
+  document.querySelector('.img').style.backgroundImage = "url(" + anchorElement.dataset.imgSrc + ")";
+  document.querySelector('.img-title').innerText = anchorElement.dataset.imgTitle;
+  document.querySelector('.img-description').innerText = anchorElement.dataset.imgDescription;
+  currentImgIndex = anchorElement.dataset.imgIndex;
+  document.querySelector('body').classList.add('img-viewer');
+};
 
 for (i = 0; i < allImgLinks.length; i++) {
-  allImgLinks[i].onclick = function (e) {
-    // console.log(e.target.dataset.imgSrc);
-    document.querySelector('.img').style.backgroundImage = "url(" + e.target.dataset.imgSrc + ")";
-    document.querySelector('.img-title').innerText = e.target.dataset.imgTitle;
-    document.querySelector('.img-description').innerText = e.target.dataset.imgDescription;
-    document.querySelector('body').classList.add('img-viewer');
-  }
+  allImgLinks[i].onclick = function(e) {
+    showImg(e.target);
+  };
 }
+
+const nextImg = function(e) {
+  let nextImgIndex = parseInt(currentImgIndex) + 1;
+
+  if (nextImgIndex === 20) {
+    nextImgIndex = 0;
+  };
+
+  showImg(allImgLinks[nextImgIndex]);
+}
+
+document.querySelector('.next').onclick = nextImg;
 
 const closeViewer = function(e) {
   document.querySelector('body').classList.remove('img-viewer');

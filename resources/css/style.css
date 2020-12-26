@@ -32,6 +32,25 @@ h4,
     font-family: "Open Sans", sans-serif;
 }
 
+/* ----- LINKS ----- */
+.thumb a,
+.next,
+.previous,
+.close-btn {
+    cursor: pointer;
+}
+
+.social li a:hover,
+.contact-info li a:hover,
+.main-nav li a:hover,
+.next:hover,
+.previous:hover,
+.close-btn:hover{
+    color: chocolate;
+    transition: 0.5s;
+}
+
+/* ----------------- */
 /* MAIN MENU */
 .background {
     background-image: linear-gradient(rgba(30, 30, 30, 0.45), rgba(30, 30, 30, 0.45)), url("/resources/img/background-1.jpg");
@@ -86,6 +105,7 @@ h2 {
     font-weight: 300;
 }
 
+/* ----------------- */
 /* GALLERY */
 section {
     width: 100%;
@@ -124,7 +144,6 @@ h3 {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
-    cursor: pointer;
 }
 
 .thumb a:hover {
@@ -204,9 +223,9 @@ h3 {
     right: 16px;
     font-size: 20px;
     font-weight: 300;
-    cursor: pointer;
 }
 
+/* ----------------- */
 /* BIO */
 .bio-background {
     background-image: linear-gradient(rgba(30, 30, 30, 0.7), rgba(30, 30, 30, 0.7)), url("/resources/img/background-2.jpg");
@@ -254,6 +273,7 @@ h4 {
     margin: 0;
 }
 
+/* ----------------- */
 /* FOOTER */
 footer{
     display: block;
@@ -279,13 +299,6 @@ footer{
 .social li a {
     color: rgb(172, 172, 172);
     text-decoration: none;
-}
-
-.social li a:hover,
-.contact-info li a:hover,
-.main-nav li a:hover {
-    color: chocolate;
-    transition: 0.5s;
 }
 
 .eml-footer,
