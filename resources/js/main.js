@@ -1,30 +1,57 @@
+// EMAIL PROTECTION ------------------------------------------------------------------
 const srcAdrs = '79180b0d100a0d57120a1c171018391e14181015571a1614';
 
 function decodeEmail(encodedString) {
-    let email = ''; 
+  let email = '';
 
-    const keyInHex = encodedString.substr(0, 2);
+  const keyInHex = encodedString.substr(0, 2);
 
-    const key = parseInt(keyInHex, 16);
+  const key = parseInt(keyInHex, 16);
 
-    for (let n = 2; n < encodedString.length; n += 2) {
-        const charInHex = encodedString.substr(n, 2)
-        const char = parseInt(charInHex, 16);
-        const output = char ^ key;
+  for (let n = 2; n < encodedString.length; n += 2) {
+    const charInHex = encodedString.substr(n, 2)
+    const char = parseInt(charInHex, 16);
+    const output = char ^ key;
 
-        email += String.fromCharCode(output);
-    }
-    return email;
+    email += String.fromCharCode(output);
+  }
+  return email;
 }
 
 let allElements = document.getElementsByClassName('eml-protected');
 
-for (let i = 0; i < allElements.length; i ++) {
-    updateAnchor(allElements[i]);
+for (let i = 0; i < allElements.length; i++) {
+  updateAnchor(allElements[i]);
 }
 
 function updateAnchor(element) {
-    const decoded = decodeEmail(srcAdrs);
-    element.textContent = decoded;
-    element.href = 'mailto:' + decoded;
+  const decoded = decodeEmail(srcAdrs);
+  element.textContent = decoded;
+  element.href = 'mailto:' + decoded;
+}
+
+// IMAGE VIEWER -------------------------------------------------------------------------
+const allImgLinks = document.querySelectorAll('.img-viewer-trigger');
+
+for (i = 0; i < allImgLinks.length; i++) {
+  allImgLinks[i].onclick = function (e) {
+    // console.log(e.target.dataset.imgSrc);
+    document.querySelector('.img').style.backgroundImage = "url(" + e.target.dataset.imgSrc + ")";
+    document.querySelector('.img-title').innerText = e.target.dataset.imgTitle;
+    document.querySelector('.img-description').innerText = e.target.dataset.imgDescription;
+    document.querySelector('body').classList.add('img-viewer');
+  }
+}
+
+const closeViewer = function(e) {
+  document.querySelector('body').classList.remove('img-viewer');
+}
+
+document.querySelector('.close-btn').onclick = closeViewer;
+
+document.onkeyup = function keyPress(e) {
+  console.log('test string');
+  if(e.key === "Escape") {
+    closeViewer();
+  }
 }

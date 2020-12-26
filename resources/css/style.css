@@ -124,7 +124,6 @@ h3 {
     background-size: cover;
     background-position: 50% 50%;
     position: relative;
-    cursor: pointer;
 }
 
 .thumb a:hover {
@@ -152,10 +151,18 @@ h3 {
     position: fixed;
     top: 0;
     background-image: linear-gradient(rgba(10, 10, 10, 0.9), rgba(10, 10, 10, 0.9));
-    padding: 20px 0;
+    padding: 28px 0;
     width: 100%;
     height: 100vh;
     box-sizing: border-box;
+}
+
+.img-viewer .img-box {
+    display: block;
+}
+
+.img-viewer {
+    overflow-y: hidden;
 }
 
 .img-content {
@@ -163,11 +170,11 @@ h3 {
     flex-direction: column;
     height: 100%;
     flex: 1 1 auto;
-    padding-top: 12px;
+    box-sizing: inherit;
 }
 
 .img {
-    /* background-image: url(" "); */
+    /* background-image: url(""); */
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 50% 50%;
@@ -179,23 +186,24 @@ h3 {
     font-family: "Open Sans", sans-serif;
     font-weight: 300;
     text-align: center;
-    padding-top: 12px;
-    flex: 0 0 82px;
+    padding-top: 16px;
+    flex: 0 0 84px;
 }
 
 .img-title {
     font-family: "Josefin Sans", sans-serif;
     font-weight: 400;
-    font-size: 28px;
+    font-size: 24px;
     text-transform: uppercase;
 }
 
 .close-btn {
     position: absolute;
-    top: 12px;
+    top: 8px;
     right: 16px;
     font-size: 20px;
     font-weight: 300;
+    cursor: pointer;
 }
 
 /* BIO */
