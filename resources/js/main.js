@@ -78,8 +78,11 @@ const closeViewer = function(e) {
 document.querySelector('.close-btn').onclick = closeViewer;
 
 document.onkeyup = function keyPress(e) {
-  console.log('test string');
-  if(e.key === "Escape") {
+  if (e.key === 'Escape') {
     closeViewer();
+  } else if (e.key === 'ArrowLeft') {
+    prevImg();
+  } else if (e.key === 'ArrowRight') {
+    nextImg();
   }
 }
