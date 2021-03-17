@@ -67,7 +67,7 @@ nav {
 }
 
 .logo-btn {
-  background-image: url("/resources/img/logo-2.png");
+  background-image: url("/resources/img/logo.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -258,7 +258,7 @@ h3 {
 
 .bio {
   position: relative;
-  top: 30%;
+  top: 25%;
   max-width: 960px;
   display: flex;
   flex-flow: row wrap;
@@ -327,4 +327,108 @@ footer {
 .eml-footer,
 .copyright {
   color: rgb(90, 90, 90);
+}
+
+/* ----------------- */
+/* MEDIA QUERIES */
+/* @media screen and (max-width: 1024px) {
+  .bio {
+    top: 25%;
+  }
+} */
+
+@media screen and (max-width: 799px) {
+  .bio {
+    flex-flow: column wrap;
+  }
+
+  .column-one {
+    margin-right: 0;
+  }
+  
+  .column-two {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .bio-background {
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 0 0;
+    background-attachment: scroll;
+    height: 100%;
+  }
+
+  .bio {
+    padding-top: 90%;
+  }
+
+  .column-one,
+  .column-two {
+    padding: 0 18px;
+  }
+
+}
+
+@media screen and (max-width: 349px) {
+  .logo-btn {
+    height: 36px;
+    width: 36px;
+  }
+
+  .main-nav li {
+    margin-left: 20px;
+  }
+
+  .main-nav li a {
+    font-size: 16px;
+  }
+
+  .name h1,
+  .bio-name h1 {
+    font-size: 38px;
+  }
+
+  .name h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  .social li a {
+    font-size: 14px;
+  }
+
+}
+
+@media screen and (max-width: 280px) {
+  .logo-btn {
+    height: 32px;
+    width: 32px;
+    margin: 16px;
+  }
+
+  .main-nav u {
+    margin: 24px 16px;
+  }
+
+  .main-nav li {
+    margin-left: 16px;
+  }
+
+  .main-nav li a {
+    font-size: 14px;
+  }
+
+  .bio-name h1 {
+    font-size: 36px;
+  } 
+
+  .social li {
+    padding: 6px 12px;
+  }
+
 }
