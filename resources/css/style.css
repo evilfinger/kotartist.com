@@ -20,17 +20,34 @@ body {
   background-attachment: fixed;
 }
 
-.main-nav li a,
-.eml-protected {
-  color: rgb(230, 230, 230);
-  text-decoration: none;
-}
-
 h2,
 h4,
 .bio p,
 .copyright {
   font-family: "Open Sans", sans-serif;
+}
+
+.thumb-title,
+.social-tree,
+h2,
+.description,
+.bio p {
+  font-weight: 300;
+}
+
+h1,
+.img-title {
+  font-weight: 400;
+}
+
+.main-nav li,
+.thumb a,
+.logo a {
+  display: inline-block;
+}
+
+.bio p {
+  line-height: 1.6em;
 }
 
 /* ----- LINKS ----- */
@@ -49,6 +66,25 @@ h4,
 .close-btn:hover {
   color: chocolate;
   transition: 0.5s;
+}
+
+.main-nav li a,
+.eml-protected,
+.social-tree li a {
+  color: rgb(230, 230, 230);
+}
+
+.main-nav,
+.social,
+.social-tree {
+  list-style: none;
+}
+
+.main-nav li a,
+.eml-protected,
+.social li a,
+.social-tree li a {
+  text-decoration: none;
 }
 
 /* ----------------- */
@@ -77,12 +113,10 @@ nav {
 }
 
 .main-nav {
-  list-style: none;
   margin: 28px 18px;
 }
 
 .main-nav li {
-  display: inline-block;
   margin-left: 30px;
 }
 
@@ -108,17 +142,15 @@ h2 {
 
 h1 {
   font-size: 48px;
-  font-weight: 400;
 }
 
 h2 {
   font-size: 24px;
-  font-weight: 300;
 }
 
 /* ----------------- */
 /* GALLERY */
-section {
+#works-section {
   width: 100%;
   margin-bottom: 64px;
   padding-top: 32px;
@@ -147,7 +179,6 @@ h3 {
 }
 
 .thumb a {
-  display: inline-block;
   margin: 0;
   padding: 0;
   width: 100%;
@@ -173,7 +204,6 @@ h3 {
   left: 50%;
   transform: translate(-50%, -50%);
   cursor: pointer;
-  font-weight: 300;
 }
 
 /* IMAGE VIEWER */
@@ -227,7 +257,6 @@ h3 {
 
 .description {
   font-family: "Open Sans", sans-serif;
-  font-weight: 300;
   text-align: center;
   padding-top: 16px;
   flex: 0 0 84px;
@@ -235,7 +264,6 @@ h3 {
 
 .img-title {
   font-family: "Josefin Sans", sans-serif;
-  font-weight: 400;
   font-size: 24px;
   text-transform: uppercase;
 }
@@ -282,11 +310,6 @@ h3 {
   margin-top: 40px;
 }
 
-.bio p {
-  line-height: 1.6em;
-  font-weight: 300;
-}
-
 .bio h1 {
   font-size: 40px;
 }
@@ -295,6 +318,102 @@ h4 {
   font-size: 22px;
   margin: 0;
 }
+
+/* ----------------- */
+/* SOCIAL */
+#social-section {
+  height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.social-avatar {
+  background-image: url("/resources/img/pic014.jpg");
+  background-size: contain;
+  border-radius: 50%;
+  height: 100px;
+  width: 100px;
+  margin: 28px auto;
+}
+
+.social-content,
+.social-tree {
+  margin: 0 auto;
+}
+
+.social-content {
+  max-width: 600px;
+  min-width: 33%;
+  text-align: center;
+  padding: 10px;
+}
+
+.social-info h1 {
+  font-size: 28px;
+}
+
+.social-info h2 {
+  font-size: 16px;
+}
+
+.social-tree {
+  font-size: 18px;
+}
+
+.social-info {
+  margin-bottom: 36px;
+}
+
+.social-tree {
+  padding: 0;
+}
+
+.social-tree li {
+  padding: 25px;
+  margin: 8px 0;
+  border-radius: 4px;
+  background-size: cover;
+  background-position: center;
+}
+
+.social-tree li:hover {
+  background-image: none;
+  background-color: rgb(10, 10, 10);
+  color: orange;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.social-tree li a {
+  display: block;
+  height: 100%;
+}
+
+
+.link-one {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic008.jpg");
+}
+
+.link-two {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
+}
+
+.link-three {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic021.jpg");
+}
+
+.link-four {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic022.jpg");
+}
+
+.link-five {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic024.jpg");
+}
+
+/* .link-six {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic025.jpg");
+} */
 
 /* ----------------- */
 /* FOOTER */
@@ -310,7 +429,6 @@ footer {
 }
 
 .social {
-  list-style: none;
   padding: 0;
 }
 
@@ -321,7 +439,7 @@ footer {
 
 .social li a {
   color: rgb(172, 172, 172);
-  text-decoration: none;
+
 }
 
 .eml-footer,
@@ -331,12 +449,6 @@ footer {
 
 /* ----------------- */
 /* MEDIA QUERIES */
-/* @media screen and (max-width: 1024px) {
-  .bio {
-    top: 25%;
-  }
-} */
-
 @media screen and (max-width: 799px) {
   .bio {
     flex-flow: column wrap;
