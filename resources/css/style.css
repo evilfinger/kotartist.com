@@ -329,12 +329,11 @@ h4 {
 }
 
 .social-avatar {
-  background-image: url("/resources/img/pic014.jpg");
+  background-image: url("/resources/img/logo.png");
   background-size: contain;
-  border-radius: 50%;
-  height: 100px;
-  width: 100px;
-  margin: 28px auto;
+  height: 60px;
+  width: 60px;
+  margin: 20px auto;
 }
 
 .social-content,
@@ -344,9 +343,11 @@ h4 {
 
 .social-content {
   max-width: 600px;
-  min-width: 33%;
+  width: 100%;
+/* min-width: 33%; */
   text-align: center;
-  padding: 10px;
+  padding: 50px 10px;
+  box-sizing: border-box;
 }
 
 .social-info h1 {
@@ -362,7 +363,7 @@ h4 {
 }
 
 .social-info {
-  margin-bottom: 36px;
+  margin-bottom: 40px;
 }
 
 .social-tree {
@@ -370,22 +371,23 @@ h4 {
 }
 
 .social-tree li {
-  padding: 25px;
+  /* padding: 25px; */
   margin: 8px 0;
   border-radius: 4px;
   background-size: cover;
   background-position: center;
 }
 
-.social-tree li:hover {
+.social-tree a:hover {
   background-image: none;
-  background-color: rgb(10, 10, 10);
-  color: orange;
+  background-color: rgb(230, 230, 230);
+  color: rgb(20, 20, 20);
   transition: 0.3s;
   cursor: pointer;
 }
 
 .social-tree li a {
+  padding: 25px;
   display: block;
   height: 100%;
 }
@@ -396,11 +398,11 @@ h4 {
 }
 
 .link-two {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic021.jpg");
 }
 
 .link-three {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic021.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
 }
 
 .link-four {
@@ -479,6 +481,10 @@ footer {
   .column-one,
   .column-two {
     padding: 0 18px;
+  }
+
+  .social-content {
+    padding: 25px 10px;
   }
 
 }
