@@ -244,6 +244,7 @@ h3 {
   height: 100%;
   flex: 1 1 auto;
   box-sizing: inherit;
+  padding-top: 6px;
 }
 
 .img {
@@ -270,10 +271,39 @@ h3 {
 
 .close-btn {
   position: absolute;
-  top: 8px;
-  right: 16px;
-  font-size: 20px;
-  font-weight: 300;
+  top: 4px;
+  right: 4px;
+  padding-bottom: 10px;
+}
+
+.previous,
+.next {
+  padding: 20px;
+}
+
+.material-icons-outlined {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
 }
 
 /* ----------------- */
