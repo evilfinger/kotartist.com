@@ -46,10 +46,6 @@ h1,
   display: inline-block;
 }
 
-.bio p {
-  line-height: 1.6em;
-}
-
 /* ----- LINKS ----- */
 .thumb a,
 .next,
@@ -248,7 +244,6 @@ h3 {
 }
 
 .img {
-  /* background-image: url(""); */
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
@@ -267,6 +262,10 @@ h3 {
   font-family: "Josefin Sans", sans-serif;
   font-size: 24px;
   text-transform: uppercase;
+}
+
+.img-description {
+  font-size: 18px;
 }
 
 .close-btn {
@@ -316,12 +315,17 @@ h3 {
 
 .bio {
   position: relative;
-  top: 25%;
-  max-width: 960px;
+  top: 20%;
+  max-width: 1024px;
   display: flex;
   flex-flow: row wrap;
   color: rgb(255, 255, 255);
   margin: 0 auto;
+}
+
+.bio p {
+  line-height: 1.5em;
+  font-size: 19px;
 }
 
 .column-one,
@@ -374,22 +378,21 @@ h4 {
 .social-content {
   max-width: 600px;
   width: 100%;
-/* min-width: 33%; */
   text-align: center;
   padding: 50px 10px;
   box-sizing: border-box;
 }
 
 .social-info h1 {
-  font-size: 28px;
+  font-size: 30px;
 }
 
 .social-info h2 {
-  font-size: 16px;
+  font-size: 19px;
 }
 
 .social-tree {
-  font-size: 18px;
+  font-size: 19px;
 }
 
 .social-info {
@@ -401,7 +404,6 @@ h4 {
 }
 
 .social-tree li {
-  /* padding: 25px; */
   margin: 8px 0;
   border-radius: 4px;
   background-size: cover;
@@ -417,7 +419,7 @@ h4 {
 }
 
 .social-tree li a {
-  padding: 25px;
+  padding: 24px;
   display: block;
   height: 100%;
 }
@@ -432,19 +434,23 @@ h4 {
 }
 
 .link-three {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic006.jpg");
 }
 
 .link-four {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic022.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
 }
 
 .link-five {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic024.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic022.jpg");
 }
 
-/* .link-six {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic025.jpg");
+.link-six {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2)), url("/resources/img/pic024.jpg");
+}
+
+/* .link-seven {
+  background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.4)), url("/resources/img/pic025.jpg");
 } */
 
 /* ----------------- */
