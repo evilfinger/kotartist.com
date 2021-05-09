@@ -147,7 +147,6 @@ h2 {
 /* GALLERY */
 #works-section {
   width: 100%;
-  margin-bottom: 64px;
   padding-top: 32px;
 }
 
@@ -307,14 +306,21 @@ h3 {
 /* ----------------- */
 /* BIO */
 .bio-background {
+  position: absolute;
+  top: 0;
+  left: 0;
   background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/background-2.jpg");
   background-position: 50% 30%;
-  margin-bottom: 74px;
+  z-index: -1;
+}
+
+.bio-content{
+  min-height: calc(100vh - 76px);
+  box-sizing: border-box;
+  padding-top: 10%;
 }
 
 .bio {
-  position: relative;
-  top: 20%;
   max-width: 1024px;
   display: flex;
   flex-flow: row wrap;
@@ -457,7 +463,7 @@ h4 {
 footer {
   display: block;
   text-align: center;
-  margin: 30px auto;
+  margin: 60px auto;
 }
 
 .copyright {
@@ -486,7 +492,13 @@ footer {
 
 /* ----------------- */
 /* MEDIA QUERIES */
-@media screen and (max-width: 799px) {
+@media screen and (max-width: 850px) and (orientation: landscape) {
+  .bio-background {
+    height: 600px;
+  }
+}
+
+@media screen and (max-width: 850px) {
   .bio {
     flex-flow: column wrap;
   }
@@ -501,16 +513,15 @@ footer {
 }
 
 @media screen and (max-width: 768px) {
-  .bio-background {
+  /* .bio-background {
     background-repeat: no-repeat;
     background-size: contain;
     background-position: 0 0;
-    background-attachment: scroll;
     height: 100%;
-  }
+  } */
 
   .bio {
-    padding-top: 90%;
+    padding-top: 30%;
   }
 
   .column-one,
