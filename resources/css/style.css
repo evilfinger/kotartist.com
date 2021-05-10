@@ -238,7 +238,7 @@ h3 {
   height: 100%;
   flex: 1 1 auto;
   box-sizing: inherit;
-  padding-top: 6px;
+  padding-top: 10px;
 }
 
 .img {
@@ -252,7 +252,7 @@ h3 {
 .description {
   font-family: "Open Sans", sans-serif;
   text-align: center;
-  padding-top: 16px;
+  padding-top: 12px;
   flex: 0 0 84px;
 }
 
@@ -268,9 +268,8 @@ h3 {
 
 .close-btn {
   position: absolute;
-  top: 4px;
-  right: 4px;
-  padding-bottom: 10px;
+  top: 10px;
+  right: 10px;
 }
 
 .previous,
@@ -317,7 +316,7 @@ h3 {
 .bio-content{
   min-height: calc(100vh - 76px);
   box-sizing: border-box;
-  padding-top: 10%;
+  padding-top: 6%;
 }
 
 .bio {
@@ -431,31 +430,31 @@ h4 {
 
 
 .link-one {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic008.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.4)), url("/resources/img/pic008.jpg");
 }
 
 .link-two {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic021.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.4)), url("/resources/img/pic021.jpg");
 }
 
 .link-three {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic006.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.4)), url("/resources/img/pic006.jpg");
 }
 
 .link-four {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic010.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.4)), url("/resources/img/pic010.jpg");
 }
 
 .link-five {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.6)), url("/resources/img/pic022.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.6), rgba(20, 20, 20, 0.4)), url("/resources/img/pic022.jpg");
 }
 
 .link-six {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0.2)), url("/resources/img/pic024.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.2), rgba(20, 20, 20, 0)), url("/resources/img/pic024.jpg");
 }
 
 .link-seven {
-  background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.4)), url("/resources/img/pic025.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.2)), url("/resources/img/pic025.jpg");
 }
 
 /* ----------------- */
@@ -492,13 +491,27 @@ footer {
 
 /* ----------------- */
 /* MEDIA QUERIES */
+@media screen and (max-width: 1200px) {
+  .bio-content {
+    padding-top: 20%;
+  }
+
+  .img-content {
+    height: 95%;
+  }
+}
+
 @media screen and (max-width: 850px) and (orientation: landscape) {
   .bio-background {
-    height: 600px;
+    height: 450px;
   }
 }
 
 @media screen and (max-width: 850px) {
+  .bio-background {
+    height: 600px;
+  }
+
   .bio {
     flex-flow: column wrap;
   }
@@ -510,18 +523,20 @@ footer {
   .column-two {
     margin-top: 0;
   }
+
+  .close-btn {
+    top: 6px;
+    right: 6px;
+  }
 }
 
 @media screen and (max-width: 768px) {
-  /* .bio-background {
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 0 0;
-    height: 100%;
-  } */
+  .content {
+    top: 30%;
+  }
 
   .bio {
-    padding-top: 30%;
+    padding-top: 50%;
   }
 
   .column-one,
@@ -535,7 +550,7 @@ footer {
 
 }
 
-@media screen and (max-width: 349px) {
+@media screen and (max-width: 380px) {
   .logo-btn {
     height: 36px;
     width: 36px;
@@ -562,10 +577,17 @@ footer {
     font-size: 28px;
   }
 
-  .social li a {
-    font-size: 14px;
+  .social-info h1 {
+    font-size: 24px;
   }
-
+  
+  .social-info h2 {
+    font-size: 18px;
+  }
+  
+  .social-tree {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width: 280px) {
