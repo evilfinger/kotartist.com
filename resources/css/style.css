@@ -85,7 +85,7 @@ h1,
 /* ----------------- */
 /* MAIN MENU */
 .background {
-  background-image: linear-gradient(rgba(30, 30, 30, 0.45), rgba(30, 30, 30, 0.45)), url("/resources/img/background-1.jpg");
+  background-image: linear-gradient(rgba(20, 20, 20, 0.4), rgba(20, 20, 20, 0.4)), url("/resources/img/background-1.jpg");
   background-position: 50% 30%;
 }
 
@@ -97,7 +97,7 @@ nav {
   z-index: 3;
 }
 
-.logo-btn {
+.logo {
   background-image: url("/resources/img/logo.png");
   background-size: contain;
   background-position: center;
@@ -551,7 +551,7 @@ footer {
 }
 
 @media screen and (max-width: 380px) {
-  .logo-btn {
+  .logo {
     height: 36px;
     width: 36px;
   }
@@ -591,7 +591,7 @@ footer {
 }
 
 @media screen and (max-width: 280px) {
-  .logo-btn {
+  .logo {
     height: 32px;
     width: 32px;
     margin: 16px;
